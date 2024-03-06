@@ -26,7 +26,8 @@ enable_testing()
 add_executable(
   ${PROJECT_NAME}_test
   ${CMAKE_CURRENT_SOURCE_DIR}/test/my_lib_test.cpp
- "include/gtest_example/my_lib.h" "src/my_lib.cpp")
+  ${CMAKE_CURRENT_SOURCE_DIR}/test/stack_test.cpp
+ "include/gtest_example/my_lib.h" "include/gtest_example/stack.h" "src/my_lib.cpp")
 target_link_libraries(
   ${PROJECT_NAME}_test
   GTest::gtest_main
